@@ -6,6 +6,12 @@
     <title>Livro - Bookteca - Livros de qualidade que você não encontra na biblioteca.</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="node_modules/ladda/dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <style>
+    .cor-do-erro{
+      color:red;
+    }
+    </style>
 
   </head>
   
@@ -39,22 +45,29 @@
       </p>
     </div>
     <div class="container ">
-      <form>
+      <form id="formLivro">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-7 ">
                 <div class="input-group ">
-                    <input type="text" name="titulo" value="" class="form-control" placeholder="Qual o titulo do livro?"/>
+                    <input type="text" name="titulo" value="" class="form-control" placeholder="Qual o titulo do livro?" required="required"/><!--o err esta aqui-->
+
                   </div>
+                  <div class="error"></div>
               </div>
               <div class="col-sm-12 col-md-7 mt-3">
                   <div class="input-group">
-                      <input type="text" name="subtitulo" value="" class="form-control" placeholder="Qual o subtitulo do livro?"/>
+                      <input type="text" name="subtitulo" value="" class="form-control" placeholder="Qual o subtitulo do livro?" required="required"/>
+                  
                     </div>
+                  <div class="error"></div>
+
                 </div>
                 <div class="col-sm-12 col-md-7 mt-3">
                     <div class="input-group ">
-                        <textarea rows="7" type="text" name="descricao" value="" class="form-control" placeholder="Qual a descrição do livro?"></textarea> </textarea>
+                        <textarea rows="7" type="text" name="descricao" value="" class="form-control" placeholder="Qual a descrição do livro?" required="required"></textarea>
                       </div>
+                      <div class="error"></div>
+
                   </div>
               </div>
         </div>
@@ -66,13 +79,10 @@
       </form>
     </div>
   </body>
-  <script type="text/javascript" src="node_modules/ladda/dist/spin.min.js">
-
-  </script>
-  <script type="text/javascript" src="node_modules/ladda/dist/ladda.min.js">
-
-  </script>
-  <script type="text/javascript" src="livro.js">
-
-  </script>
+  <script type="text/javascript" src="node_modules/ladda/dist/spin.min.js"></script>
+  <script type="text/javascript" src="node_modules/ladda/dist/ladda.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="livro.js"></script>
+  
 </html>
